@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WTXPrism.Common"
+             x:Class="ROLF.Views.MainPage"
+             Visual="Material"
+             Title="{Binding Title}">
+    <!-- IPAddress is fixed in first version, may be later we can activate the network settings page!!
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="Network" Priority="1" Order="Secondary" Command="{Binding NavigateToNetwork, Mode=OneTime}"/>
+    </ContentPage.ToolbarItems>
+    -->
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="ROLF" VerticalTextAlignment="Start" FontSize="Large" TextColor="White"/>
+            <Label Text=" Real Optimal Liquid Filler" FontSize="Small" VerticalTextAlignment="Center"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+        <Button Text="Connect" BackgroundColor="Gray" Command="{Binding ConnectDevice}" />
+        <StackLayout Orientation="Horizontal" >
+            <Label FontSize="Small" Text="{Binding CoarseFlow}"/>
+            <Label FontSize="Small" Text="{Binding FineFlow}"/>
+            <Label FontSize="Small" Text="{Binding ScaleStatus}"/>
+        </StackLayout>
+        <local:MyLabel NamedFontSize="Large" FontSizeFactor="2.0" Text="{Binding Weight}" HorizontalOptions = "End" />
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="Tare"  Command="{Binding Tare}" />
+            <Button Text="Gross"  Command="{Binding GrossNet}" />
+            <Button Text="Zero"  Command="{Binding Zero}" />
+        </StackLayout>
+        <local:MyLabel NamedFontSize="Large" FontSizeFactor="2.0" Text="{Binding FillingResult}" HorizontalOptions = "End" />
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="Start"  Command="{Binding StartFilling}" />
+            <Button Text="Stop"  Command="{Binding BreakFilling}" />
+        </StackLayout>
+        <Label FontSize="Default" TextColor="Gray" Text="{Binding ConnectStatus}" HorizontalOptions = "CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>

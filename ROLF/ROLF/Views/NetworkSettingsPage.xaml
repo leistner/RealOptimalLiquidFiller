@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:behavior="clr-namespace:ROLF.ViewModels"
+             Visual="Material"
+             x:Class="ROLF.Views.NetworkSettingsPage">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="IP Address" FontSize="Large"/>
+        <Editor Text="{Binding IPAddress}"  Keyboard="Url"/>
+
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="Apply" Command="{Binding NavigateApply}"/>
+            <Button Text="Abort" Command="{Binding NavigateAbort}"/>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

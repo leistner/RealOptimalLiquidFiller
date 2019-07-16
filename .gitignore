@@ -1,0 +1,8 @@
+ROLF/ROLF/obj/
+ROLF/ROLF/bin/Release/netstandard2.0/ROLF.deps.json
+ROLF/ROLF.iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+ROLF/ROLF.iOS/obj/
+ROLF/ROLF.Android/obj/
+ROLF/ROLF.Android/bin/
+.vs/
+ROLF/ROLF/bin/
